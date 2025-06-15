@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+.text-danger {
+    color: red;
+}
