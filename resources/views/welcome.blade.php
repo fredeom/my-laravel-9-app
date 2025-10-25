@@ -8,12 +8,15 @@
         <link rel="stylesheet" href="/css/simple.css">
         <link rel="stylesheet" href="/css/style_buttons.css">
         <link rel="stylesheet" href="/css/style_modal.css">
+        <link rel="stylesheet" href="/css/other.css">
         <script src="/js/_hyperscript.min.js"></script>
         <script src="/js/htmx.min.js"></script>
+        <?php /*
         @vite([
             'resources/css/app.css',
             'resources/js/app.js'
         ])
+        */ ?>
         <script>
             document.addEventListener("htmx:configRequest", (event) => {
                 const token = document.querySelector('meta[name="csrf-token"]').content;

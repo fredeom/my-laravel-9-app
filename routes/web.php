@@ -69,3 +69,6 @@ Route::delete('/products/{id}/delete', [ProductController::class, 'delete'])->na
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::post('/orders/new', [OrderController::class, 'store'])->name('orders.new');
 Route::patch('/orders/{id}/done', [OrderController::class, 'done'])->name('orders.done');
+
+Route::get('/orders/export-word', [OrderController::class, 'exportWord'])->name('orders.export-word');
+Route::get('/orders/export-pdf', [OrderController::class, 'exportPdf'])->name('orders.export-pdf');

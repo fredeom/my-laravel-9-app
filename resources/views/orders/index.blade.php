@@ -3,6 +3,17 @@
 <p>
     <button class="btn btn-primary" hx-get="/modal" hx-target="#m"
 		hx-vals='{"state":"newOrder"}'>Добавить заказ</button>
+    <button class="btn btn-secondary"
+            hx-get="/orders/export-word"
+            hx-on:htmx:after-request="window.open(event.detail.xhr.responseURL, '_blank')"
+            hx-target="#temp-container"
+            >Экспорт заказов в word</button>
+    <button class="btn btn-secondary"
+            hx-get="/orders/export-pdf"
+            hx-on:htmx:after-request="window.open(event.detail.xhr.responseURL, '_blank')"
+            hx-target="#temp-container"
+            >Экспорт заказов в pdf</button>
+    <div id="temp-container" style="display: none;"></div>
 </p>
 
 <p>
